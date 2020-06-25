@@ -1,0 +1,21 @@
+{
+  "name": "01a_oop",
+  "version": "1.0.0",
+  "description": "Object Oriented Programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Mediamatiker",
+    "ICT-06",
+    "javascript",
+    "oop"
+  ],
+  "author": "daniel.garavaldi@bzz.ch",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.27.0",
+    "esm": "^3.2.25"
+  }
+}
