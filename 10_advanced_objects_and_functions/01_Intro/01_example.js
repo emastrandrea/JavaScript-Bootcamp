@@ -33,9 +33,9 @@ let person2 = {
 //Ausgabe des vollen Namens auf der Console
 console.log(person2.getFullName());
 
-/* Frage/Problemstellung:
+/* Frage:
 In der realen Welt (z.B. Webshop) gibt es mehr als 2 Personen.
-Wie kann ich effizient 100 oder mehr verschiedene
-Objekt vom Typ 'person' (Bsp. Kunden, Benutzer ... ) mit unterschiedlichen
-Eigenschaften erstellen?
+Was muss ich tun wenn ich 100 oder mehr verschiedene
+Objekt 'person' (Bsp. Kunden, Benutzer ... ) mit unterschiedlichen Eigenschaften
+erstellen möchte?
 */
