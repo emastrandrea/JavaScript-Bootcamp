@@ -1,4 +1,8 @@
 /*
+Thema: Arrow function
+Das ist nicht anderes als eine andere, kompaktere
+Schreibweise für Funktionen in JavaScript (und auch in anderen Programmiersprachen).
+
 Beispiel 1 - Arrow-Funktion ohne Parameter
  */
 
@@ -10,7 +14,7 @@ let greetUser = () => {
 //Aufruf der Arrow-Funktion mit gleichzeitger Ausgabe auf der Console
 greetUser();
 
-//Arrow-Funktionsname als EINzeihler (in Ausnahmefällen)
+//Arrow-Funktionsname als Einzeihler (in Ausnahmefällen)
 let greetUserLong = () => console.log('Welcome user too!');
 
 //Aufruf der Arrow-Funktion mit gleichzeitger Ausgabe auf der Console
@@ -49,26 +53,11 @@ let add = (a,b) => {
     return a + b;
 }
 
-let div = (a,b) => {
-    return a / b;
-}
-
 //Aufruf von add
 let paramA = 20;
 let paramB = 10;
 //Ausgabe des Resultats
 console.log(`${paramA} + ${paramB} = ${add(paramA,paramB)}`);
-
-//Aufruf div mit gültigen Parametern
-paramA = 20;
-paramB = 10;
-//Ausgabe des Resultats
-console.log(`${paramA} / ${paramB} = ${div(paramA,paramB)}`);
-//Aufruf div mit UNgültigen Parametern
-paramA = 20;
-paramB = 0;
-//Ausgabe des Resultats
-console.log(`${paramA} / ${paramB} = ${div(paramA,paramB)}`);
 
 
 /*
@@ -111,7 +100,7 @@ console.log(`${obj1.summary}. ${obj1.pageCount}`);
 /*
 Was ist nun der Vorteil dieser Funktionen?
 1. Einerseits kompakte Schreibweise
-2. Es lassen sich Built-in Methoden auf Objekte anwenden. Beispiel unten
+2. Es lassen sich Built-in Methoden auf Objekte elegant anwenden. Beispiel unten
  */
 
 const personen = [{
@@ -126,22 +115,24 @@ const personen = [{
 }]
 
 
-const filter1 =
+let filter1 =
     personen.filter((person) =>
         person.age < 30
 );
 console.log(filter1);
 
-const filter2 =
-    personen.find((person) =>
-        person.age < 30
-);
-console.log(filter2);
-
-const filter3 =
+filter1 =
     personen.find((person) =>
         person.age === 22
 );
-console.log(filter3);
+console.log(filter1);
+
+//Zur Erinnerung: mit function kann es auch geschrieben werden
+filter1 =
+    personen.find(function(person) {
+        return person.age === 22;
+    }
+);
+console.log(filter1);
 
 

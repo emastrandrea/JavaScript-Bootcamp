@@ -1,4 +1,9 @@
 /*
+Thema: Funktionen
+Funktionen (praktisch in allen Programmiersprachen) vorhanden,
+erlauben Programmcode mehrmals auszuführen gestalten die gesamte
+Applikation wartbarer (leserlich, kosteneffizient, erweiterbar).
+
 Beispiel 1 - Funktion ohne Parameter
  */
 
@@ -10,7 +15,7 @@ let greetUser = function () {
 //Aufruf der Funktion mit gleichzeitger Ausgabe auf der Console
 greetUser();
 greetUser();
-greetUser();
+
 
 //oder als 'function declaration' -> Funktionsname wird hinzugefügt.
 function greetUser2() {
