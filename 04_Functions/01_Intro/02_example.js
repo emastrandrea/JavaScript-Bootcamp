@@ -98,9 +98,10 @@ console.log(`${obj1.summary}. ${obj1.pageCount}`);
 
 
 /*
-Was ist nun der Vorteil dieser Funktionen?
+Was ist nun der Vorteil Arrow-Funktionen?
 1. Einerseits kompakte Schreibweise
-2. Es lassen sich Built-in Methoden auf Objekte elegant anwenden. Beispiel unten
+2. Es lassen sich Built-in Methoden auf Objekte und Arrays elegant anwenden.
+Beispiel unten ist mit dem Array personen:
  */
 
 const personen = [{
@@ -135,4 +136,6 @@ filter1 =
 );
 console.log(filter1);
 
-
+/* Beispiel zum Filtern mit Regular Expression finden Sie z.B. hier
+https://stackoverflow.com/questions/54693939/wildcard-filter-array-of-objects-javascript
+ */

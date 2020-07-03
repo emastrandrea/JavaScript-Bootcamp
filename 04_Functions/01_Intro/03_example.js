@@ -28,7 +28,7 @@ try {
     //Ausgabe des Resultats
     console.log(`${paramA} / ${paramB} = ${div(paramA,paramB)}`);
 
-    paramA = 20; paramB = "0";
+    paramA = 20; paramB = 0;
     //Ausgabe des Resultats
     console.log(`${paramA} / ${paramB} = ${div(paramA,paramB)}`);
 

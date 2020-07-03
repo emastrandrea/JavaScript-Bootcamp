@@ -62,18 +62,16 @@ function div(a,b) {
 //Aufruf von add
 let paramA = 20;
 let paramB = 10;
-//Ausgabe des Resultats
 console.log(`${paramA} + ${paramB} = ${add(paramA,paramB)}`);
 
 //Aufruf div mit gültigen Parametern
 paramA = 20;
 paramB = 10;
-//Ausgabe des Resultats
 console.log(`${paramA} / ${paramB} = ${div(paramA,paramB)}`);
+
 //Aufruf div mit UNgültigen Parametern
 paramA = 20;
 paramB = 0;
-//Ausgabe des Resultats
 console.log(`${paramA} / ${paramB} = ${div(paramA,paramB)}`);
 
 
