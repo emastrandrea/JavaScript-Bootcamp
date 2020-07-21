@@ -22,7 +22,7 @@ class Person {
 
     /* Methode - kann Parameter haben */
     getFullName(){
-        return `Mein Name ist ${this.firstName} ${this.lastName}.`
+        return `Mein Name ist ${this.firstName} ${this.lastName}.`;
     }
 
 }
