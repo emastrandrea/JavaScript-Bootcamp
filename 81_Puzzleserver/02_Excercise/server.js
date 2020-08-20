@@ -1,6 +1,5 @@
 let express = require("express");
 let app     = express();
-let path    = require("path");
 const port = process.env.PORT || 3000;
 
 const server = app.listen(port);
