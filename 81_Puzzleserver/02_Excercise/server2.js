@@ -32,3 +32,22 @@ app.get('/puzzle', (req, res) => {
     const random = Math.floor(Math.random() * moviePuzzleList.length);
     res.send(JSON.stringify({puzzle: moviePuzzleList[random]}));
 });
+
+const manufacturerList = ["Ibanez", "Gibson", "Fender", "PRS",
+    "Schecter", "Jackson", "EVH", "Epiphone", "Martin"];
+
+//call url http://localhost:3000/manufacturer
+app.get('/manufacturer', (req, res) => {
+    const random = Math.floor(Math.random() * manufacturerList.length);
+    res.send(JSON.stringify({name: manufacturerList[random]}));
+});
+
+/* Aufgabe:
+1. Fügen Sie einen Array categoryList mit Gitarren-Kategorien,
+z.B. "Concert", "E-Guitar", "Western", "E-Bass", "Ukulele", "Bluegrass", "Acoustic-Bass"
+2. Fügen Sie einen neuen REST-Pfad, welche auf die über die
+URL http://localhost:3000/category per Zufallsgenerator eine
+Kategorie zurückgibt.
+ */
+
+

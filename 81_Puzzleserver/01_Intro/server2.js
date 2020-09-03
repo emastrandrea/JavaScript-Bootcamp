@@ -6,8 +6,6 @@ b. Bei einer Anfrage durch einen Client per Zufallsgenerator einen Film zurück 
 
 let express = require("express");
 let app     = express();
-let path    = require("path");
-//let fs = require("fs");
 const port = process.env.PORT || 3000;
 
 const server = app.listen(port);
@@ -31,4 +29,13 @@ const moviePuzzleList = ["Shrek","Alice in Wonderland",
 app.get('/puzzle', (req, res) => {
     const random = Math.floor(Math.random() * moviePuzzleList.length);
     res.send(JSON.stringify({puzzle: moviePuzzleList[random]}));
+});
+
+const manufacturerList = ["Ibanez", "Gibson", "Fender", "PRS",
+    "Schecter", "Jackson", "EVH", "Epiphone", "Martin"];
+
+//call url http://localhost:3000/manufacturer
+app.get('/manufacturer', (req, res) => {
+    const random = Math.floor(Math.random() * manufacturerList.length);
+    res.send(JSON.stringify({name: manufacturerList[random]}));
 });

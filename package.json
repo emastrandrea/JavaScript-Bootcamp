@@ -4,7 +4,7 @@
   "description": "Learning JavaScript Programming",
   "main": "index.js",
   "scripts": {
-    "puzzleserver": "node 81_Puzzleserver/01_Intro/server.js",
+    "puzzleserver": "node 81_Puzzleserver/00_Demo/server2.js",
     "guitarserver": "node -r esm 82_Manufacturer/01_Intro/server.js"
   },
   "keywords": [

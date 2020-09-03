@@ -25,5 +25,5 @@ request.addEventListener('readystatechange', (evt) => {
 });
 
 //URL of the puzzle server with misspelling
-request.open('GET', 'http://localhost:3000/puzle');
+request.open('GET', 'http://localhost:3000/puzzle');
 request.send();
