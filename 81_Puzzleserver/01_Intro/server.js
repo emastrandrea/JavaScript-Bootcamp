@@ -27,9 +27,22 @@ const moviePuzzleList = ["Shrek","Alice in Wonderland",
     "Finding Nemo", "My Fair Lady", "Cinderella", "Cars", "Spiderman",
     "Peter Pan", "Toy Story", "Inception Robin Hood"];
 
-//call url: //http://localhost:3000/puzzle
+//call url //http://localhost:3000/puzzle
 app.get('/puzzle', (req, res) => {
     const random = Math.floor(Math.random() * moviePuzzleList.length);
     res.send(JSON.stringify({puzzle: moviePuzzleList[random]}));
-})
+});
+
+const manufacturerList = ["Ibanez", "Gibson", "Fender", "PRS",
+    "Schecter", "Jackson", "EVH", "Epiphone", "Martin"];
+
+const categoryList = ["Concert", "E-Guitar", "Western", "E-Bass", "Ukulele",
+    "Bluegrass", "Acoustic-Bass"];
+
+
+//call url //http://localhost:3000/manufacturer
+app.get('/manufacturer', (req, res) => {
+    const random = Math.floor(Math.random() * manufacturerList.length);
+    res.send(JSON.stringify({name: manufacturerList[random]}));
+});
 

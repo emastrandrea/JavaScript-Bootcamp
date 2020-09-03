@@ -115,6 +115,10 @@ const personen = [{
     age: 22
 }]
 
+const personen = [{ name: 'Andrew', age: 27},
+    {name: 'Vikram', age: 31},
+    {name: 'Jess', age: 22}];
+
 
 let filter1 =
     personen.filter((person) =>

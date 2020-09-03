@@ -4,7 +4,8 @@
   "description": "Learning JavaScript Programming",
   "main": "index.js",
   "scripts": {
-    "puzzleserver": "node 81_Puzzleserver/01_Intro/server.js"
+    "puzzleserver": "node 81_Puzzleserver/01_Intro/server.js",
+    "guitarserver": "node -r esm 82_Manufacturer/01_Intro/server.js"
   },
   "keywords": [
     "Mediamatiker",
@@ -17,6 +18,7 @@
   "dependencies": {
     "moment": "^2.27.0",
     "esm": "^3.2.25",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0"
   }
 }

@@ -31,6 +31,6 @@ personArray.push(new Person("Greta", "Thunberg", "weiblich", "2003-03-01"));
 
 //console.log(personArray);
 //Ausblick
-console.log(personArray.filter((person) => person.geschlecht === "weiblich"));
+//console.log(personArray.filter((person) => person.geschlecht === "weiblich"));
 
 
