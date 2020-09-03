@@ -23,8 +23,11 @@
     let randAnimTypes;
     let randAnimSpeed;
 
+        //Zufallsgenerator
         randAnimTypes = Math.floor(Math.random() * animationTypes.length);
-        randAnimSpeed = Math.floor(Math.random() * animationTypes.length);
+        randAnimSpeed = Math.floor(Math.random() * animationSpeed.length);
+
+        //Zuweisung der Animation an data1-Element
         document.querySelector('#data1').classList.add('animate__animated',
             animationTypes[randAnimTypes], animationSpeed[randAnimSpeed]);
 </script>

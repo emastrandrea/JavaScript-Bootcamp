@@ -11,7 +11,9 @@ getManufacturerCB((manufCB) => {
 });
 
 
-/*const request1 = new XMLHttpRequest();
+/*
+
+const request1 = new XMLHttpRequest();
 request1.addEventListener('readystatechange', (evt) => {
     if (evt.target.readyState === 4 && evt.target.status === 200) {
         let data1 = JSON.parse(evt.target.responseText);
@@ -27,4 +29,6 @@ request1.addEventListener('readystatechange', (evt) => {
 });
 
 request1.open('GET', manufURL);
-request1.send();*/
+request1.send();
+
+*/
