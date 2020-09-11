@@ -1,5 +1,13 @@
 /*
-Beispiel Objekt 'person',
+Thema: Klassen und Objekte in JavaScript
+Objekte in Programmiersprachen (wie JavaScript) helfen die Wirklichkeit
+(Gegenstände, Vorgänge, Lebewesen usw.) programmtechnisch abzubilden.
+Klassen können Sie sich als Vorlage (Template) vorstellen, welche zur Erstellung von Objekten
+dienen.
+ */
+
+/*
+Beispiel Objekt 'person' als Object Literal
 mit den Eigenschaften Hans Müller, männlich, geboren am 12.Nov. 1973
  */
 let person1 = {

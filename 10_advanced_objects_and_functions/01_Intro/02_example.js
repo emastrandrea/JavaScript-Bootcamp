@@ -1,5 +1,16 @@
+/*
+Thema: Klassen und Objekte in JavaScript
+Objekte in Programmiersprachen (wie JavaScript) helfen die Wirklichkeit
+(Gegenstände, Vorgänge, Lebewesen usw.) programmtechnisch abzubilden.
+Klassen können Sie sich als Vorlage (Template) vorstellen, welche zur Erstellung von Objekten
+dienen.
+ */
+
+
 /* Modul - externer Programm-Code  nach ES5-Standard
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+* Implementation der Klasse ist im person.js
+*
 */
 import Person from './person';
 /*

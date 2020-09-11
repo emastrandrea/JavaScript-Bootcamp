@@ -1,6 +1,8 @@
 /*
-Eine Objekt-Vorlage wird in JavaScript mit class erstellt (nicht zu verwechseln CSS-Klasse)
-Beispiel für Person
+Beispiel Objekt 'Person' mit Konstruktor
+Nachfolgend wird eine Vorlage definiert mit class und mit constructor wird die
+Erzeugung des Objekts anhand der Vorlage "konstruiert".
+Wichtig: class ist nicht zu verwechseln mit einer CSS-Klasse!!
  */
 
 /* Klasse */
