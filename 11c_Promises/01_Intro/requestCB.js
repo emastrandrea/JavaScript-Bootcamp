@@ -1,5 +1,5 @@
 const studentURL = "http://localhost:3000/students/";
-const companyURL = "http://localhost:3000/company/";
+const marksURL = "http://localhost:3000/marks/";
 
 
 const getStudentCB = (id, callback) =>{
@@ -23,7 +23,7 @@ const getStudentCB = (id, callback) =>{
     request1.send();
 }
 
-const getCompanyCB = (id, callback) =>{
+const getMarksCB = (id, callback) =>{
     const request1 = new XMLHttpRequest();
     request1.addEventListener('readystatechange', (evt) => {
         if (evt.target.readyState === 4 && evt.target.status === 200) {
@@ -38,6 +38,6 @@ const getCompanyCB = (id, callback) =>{
             console.log(`Error occured with status ${evt.target.status}`);
         }
     });
-    request1.open('GET', companyURL+id);
+    request1.open('GET', marksURL+id);
     request1.send();
 }

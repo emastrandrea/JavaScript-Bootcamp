@@ -89,20 +89,61 @@ app.get('/students/:id', (req, res) => {
         } else {
             try {
                 const obj = JSON.parse(text);
-                let out = { "Student-ID": "DOES NOT EXIST!"}
+                let studentData = {};
+                studentData.student_id = "DOES NOT EXIST!";
                 for (let row in obj.school){
                     if (obj.school[row].id === parseInt(student_id)){
-                        out = {
-                            "Student-ID": obj.school[row].id,
+                        studentData = {
+                            "student_id": obj.school[row].id,
                             "Nachname": obj.school[row].last_name,
                             "Vorname": obj.school[row].first_name,
-                            "Lehrbetrieb": obj.school[row].company_id
+                            "company_id": obj.school[row].company_id
                         }
                     }
                 }
-                res.send(JSON.stringify(out, null, 4));
+                res.send(JSON.stringify(studentData, null, 4));
             } catch (e) {
                 console.error('Invalid JSON in file');
+            }
+        }
+    });
+});
+
+
+
+//Noten eines Lernenden
+//https://stackoverflow.com/questions/16507222/create-json-object-dynamically-via-javascript-without-concate-strings
+app.get('/marks/:id', (req, res) => {
+    let fileLoc = path.resolve(staticPath+'marks.json');
+    let student_id = req.params.id;
+
+    fs.readFile(fileLoc, 'utf8', (error, text) => {
+        if (error) {
+            console.error(`Error ${error}`);
+        } else {
+            try {
+                const obj = JSON.parse(text);
+                let studentData = {};
+                studentData.student_id = "DOES NOT EXIST!";
+                for (let row in obj.marks_school){
+                    if (obj.marks_school[row].student_id === parseInt(student_id)){
+                        studentData.student_id = obj.marks_school[row].student_id;
+                        studentData.modulelist = [];
+                        let counter = 0;
+                        let average = 0;
+                        for (let mod in obj.marks_school[row].modules){
+                            let module = obj.marks_school[row].modules[mod];
+                            let marks = { "module": module.name, "mark": module.mark };
+                            average += parseFloat(module.mark); counter++;
+                            studentData.modulelist.push(marks);
+                        }
+                        studentData.modulelist.push({ "average": (average/counter).toFixed(2)});
+                        break;
+                    }
+                }
+                res.send(JSON.stringify(studentData, null, 4));
+            } catch (e) {
+                console.error(`Invalid JSON in file: ${e}`);
             }
         }
     });
