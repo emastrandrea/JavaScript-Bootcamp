@@ -1,5 +1,5 @@
 const studentURL = "http://localhost:3000/students/";
-const marksURL = "http://localhost:3000/marks/";
+const marksModulesURL = "http://localhost:3000/marks_modules/";
 
 
 const getStudentCB = (id, callback) =>{
@@ -7,12 +7,12 @@ const getStudentCB = (id, callback) =>{
     request1.addEventListener('readystatechange', (evt) => {
         if (evt.target.readyState === 4 && evt.target.status === 200) {
             let data1 = evt.target.responseText;
-            //let data1 = JSON.parse(evt.target.responseText);
             console.log(`log request ${data1}`);
+            //Falls angeforderte Daten undefiniert ...
             if (typeof data1 == "undefined") {
+                //... dann Fehlermeldung zurückgeben
                 callback('Error occurred', undefined);
             } else {
-                //let out = `Nachname: ${data1.Nachname}, Vorname: ${data1.Vorname}, Lehrbetrieb: ${data1.Vorname}`
                 callback(undefined, data1);
             }
         } else if (evt.target.readyState === 4) {
@@ -23,7 +23,7 @@ const getStudentCB = (id, callback) =>{
     request1.send();
 }
 
-const getMarksCB = (id, callback) =>{
+const getModuleMarksCB = (id, callback) =>{
     const request1 = new XMLHttpRequest();
     request1.addEventListener('readystatechange', (evt) => {
         if (evt.target.readyState === 4 && evt.target.status === 200) {
@@ -38,6 +38,6 @@ const getMarksCB = (id, callback) =>{
             console.log(`Error occured with status ${evt.target.status}`);
         }
     });
-    request1.open('GET', marksURL+id);
+    request1.open('GET', marksModulesURL+id);
     request1.send();
 }

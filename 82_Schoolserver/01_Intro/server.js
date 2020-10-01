@@ -113,7 +113,7 @@ app.get('/students/:id', (req, res) => {
 
 //Noten eines Lernenden
 //https://stackoverflow.com/questions/16507222/create-json-object-dynamically-via-javascript-without-concate-strings
-app.get('/marks/:id', (req, res) => {
+app.get('/marks_modules/:id', (req, res) => {
     let fileLoc = path.resolve(staticPath+'marks.json');
     let student_id = req.params.id;
 
@@ -137,7 +137,7 @@ app.get('/marks/:id', (req, res) => {
                             average += parseFloat(module.mark); counter++;
                             studentData.modulelist.push(marks);
                         }
-                        studentData.modulelist.push({ "average": (average/counter).toFixed(2)});
+                        studentData.modulelist.push({ "module":"average", "mark": (average/counter).toFixed(2)});
                         break;
                     }
                 }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "puzzleserver": "node 81_Puzzleserver/00_Demo/server2.js",
-    "schoolserver": "node 82_Schoolserver/01_Intro/server.js",
+    "schoolserver": "node 82_Schoolserver/03_Solutions/server.js",
     "guitarserver": "node -r esm 83_Manufacturer/01_Intro/server.js"
   },
   "keywords": [
