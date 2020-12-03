@@ -1,32 +1,20 @@
 [
   {
-    "id": "87418e30-6766-43c0-8b77-2cb6cc0a7e27",
-    "username": "amuster",
-    "email": "anna.muster@beispiel.ch",
-    "password": "asdfadsffdasf"
+    "id": "f6ea7e82-3a2e-40a4-bb96-ea589198267b",
+    "username": "hmuster",
+    "email": "muster.hans@beispiel.ch",
+    "password": "stG5xct3cr2YJHp"
   },
   {
-    "id": "fc923023-41c9-4925-a533-9ef28e6c37e5",
+    "id": "21eae672-e79a-4a8c-8f5d-6920fed6aee6",
     "username": "amuster",
-    "email": "anna.muster@beispiel.ch",
-    "password": "asdfadsffdasf"
+    "email": "muster.anna@beispiel.ch",
+    "password": "stG5xct3cr2YJHp"
   },
   {
-    "id": "1e627a41-855e-47cf-a83c-f55b30cb1d2a",
-    "username": "amuster",
-    "email": "anna.muster@beispiel.ch",
-    "password": "asdfadsffdasf"
-  },
-  {
-    "id": "4558874e-ed8c-410c-acae-bd8679fb955d",
-    "username": "amuster",
-    "email": "anna.muster@beispiel.ch",
-    "password": "asdfadsffdasf"
-  },
-  {
-    "id": "45cd1214-aa0d-468e-8aac-fbadd3e7a062",
-    "username": "amuster",
-    "email": "anna.muster@beispiel.ch",
-    "password": "asdfadsffdasf"
+    "id": "dc1441e0-1a75-4d1b-9f27-9efb8aea12d7",
+    "username": "hsadfasdf2",
+    "email": "pseudoemail@beispiel.xy",
+    "password": "sadfasdfasdfsadf"
   }
 ]

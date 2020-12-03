@@ -27,22 +27,6 @@ let logger = createLogger({
     exitOnError: false // do not exit on handled exceptions
 });
 
-/*const logger = winston.createLogger({
-    level: 'info',
-    format: winston.format.json(),
-    defaultMeta: { service: 'registration-service' },
-    transports: [
-        //
-        // - Write all logs with level `error` and below to `error.log`
-        // - Write all logs with level `info` and below to `combined.log`
-        //
-        new winston.transports.File({ filename: `${rootPath}/logs/error.log`, level: 'error' }),
-        new winston.transports.File({ filename: `${rootPath}/logs/combined.log` }),
-    ],
-});*/
-
-
-
 /**
  *  Export validation functions for further usage.
  *  function to export WITHOUT brackets!

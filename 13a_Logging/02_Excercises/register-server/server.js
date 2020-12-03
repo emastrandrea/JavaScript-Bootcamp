@@ -25,10 +25,12 @@ let corsOptions = {
 app.use(cors(corsOptions));
 
 
+/* Aufgabe 3a - ./config/Logger.js einbinden mit require */
 //logging package
-const winston = require('./config/Logger');
+//???
 
 //determine client-browser (i.e. Chorme, Safari)
+//Doku und Beispiel siehe https://www.npmjs.com/package/express-useragent
 const useragent = require('express-useragent');
 app.use(useragent.express());
 
@@ -85,25 +87,17 @@ app.post('/register', (req, res) => {
         "password": req.body.user.password
     }
 
-    let ua = req.useragent;
-    let ip = req.clientIp;
-    let clientData = {
-        ip_address: ip,
-        browser: ua.browser,
-        version: ua.version,
-        os: ua.os,
-        platform: ua.platform,
-        source: ua.source
-    }
-
-    winston.logger.log({
-        level: 'info',
-        message: `client-browser: ${JSON.stringify(clientData)} `
-    });
+    /* Aufgabe 3b - IP-Adresse und Browser-Daten (Typ, Version, Betriebssystem usw)
+    des Clients als Daten loggen  */
+    //???
 
     let result = Validation.validateUser(userObj);
     if (result.isNotValid) {
-        winston.logger.error(result.msg);
+        /* Aufgabe 3c
+         * Falls die gesendeten Daten nicht valide sind,
+            dann als Fehler das Validierungsresultat loggen.
+        * */
+        //???
         res.status(HTTP_STATUS_NO_ACCEPTABLE).send(result.msg);
     } else {
         //Speicherung des neuen Benutzers
