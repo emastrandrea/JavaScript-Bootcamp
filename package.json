@@ -4,7 +4,7 @@
   "description": "Learning JavaScript Programming",
   "main": "index.js",
   "scripts": {
-    "puzzleserver": "node 81_Puzzleserver/00_Demo/server2.js",
+    "puzzleserver": "node 81_Puzzleserver/01_Intro/server2.js",
     "schoolserver": "node 82_Schoolserver/03_Solutions/server.js",
     "registrationserver": "node 12b_validation_server/00_Demo/register-server/server.js",
     "loggerserver": "set NODE_ENV=development && node 13a_Logging/00_Demo/register-server/server.js",
