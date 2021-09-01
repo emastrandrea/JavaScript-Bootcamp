@@ -14,8 +14,10 @@ server.timeout = 1000 * 60 * 2; // 2 minutes
 
 // Use middleware to set the default Content-Type
 app.use(function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Origin', 'http://localhost:63342');
+    
+    // implement CORS
+    // res.header('Access-Control-Allow-Origin', '*');
+    // res.header('Access-Control-Allow-Origin', 'http://localhost:63342');
     res.header('Content-Type', 'application/json');
     next();
 });
